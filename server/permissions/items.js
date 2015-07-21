@@ -1,11 +1,11 @@
-Items.allow({
-  'insert': function(userId, doc) {
+Tips.allow({
+  'insert': function(userId, tip) {
     return userId;
   },
-  'update': function(userId, doc, fields, modifier) {
+  'update': function(userId, tip, fields, modifier) {
     return userId;
   },
-  'remove': function(userId, doc) {
+  'remove': function(userId, tip) {
     return userId;
   }
 });

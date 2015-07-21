@@ -1,5 +1,5 @@
 Meteor.methods({
-  'Items.insert': function (params) {
-    Items.insert(params);
+  'Tips.insert': function (params) {
+    Tips.insert(params);
   }
 });

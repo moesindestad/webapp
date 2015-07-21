@@ -1,9 +1,19 @@
-Items = new Mongo.Collection('items');
+Tips = new Mongo.Collection('tips');
+Tips.attachSchema(new SimpleSchema({
+    description: {
+      type: String,
+      min: 20,
+      max: 1000,
+      autoform: {
+         rows: 5
+      }
+   }
+}));
 
-Items.helpers({
+Tips.helpers({
 
 });
 
-Items.before.insert(function (userId, doc) {
-  doc.createdAt = moment().toDate();
+Tips.before.insert(function (userId, tip) {
+  tip.createdAt = moment().toDate();
 });
